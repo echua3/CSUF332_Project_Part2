@@ -28,14 +28,15 @@
     $interim_price = (float)$_POST['interim_price'];
     $wholesale_price = (float)$_POST['wholesale_price'];
     $current_stock = (int)$_POST['current_stock'];
-    $department_name = (string)$_POST['department_name'];
-    $supplier_id = (string)$_POST['supplier_id'];
+    $department_name = $_POST['department_name'];
+    // $department_name = mysqli_real_escape_string($conn,$_POST['department_name']);
+    $supplier_id = $_POST['supplier_id'];
+    // $supplier_id = mysqli_real_escape_string($conn,$_POST['supplier_id']);
 
     $sql = "INSERT INTO ITEM (UPC, Restock_Amount, Price, Interim_Price, 
     Wholesale_Price, Current_Stock, Department_Name, Supplier_ID) 
     VALUES ('" . $upc . "', " . $restock_amount . ", " . $price . ", " . $interim_price 
-    . ", " . $wholesale_price . ", " . $current_stock . ", '" . $department_name . "', '" 
-    . $supplier_id . "')";
+    . ", " . $wholesale_price . ", " . $current_stock . ", '$department_name','$supplier_id')";
 
     if (mysqli_query($conn, $sql)) {
         echo "New item created successfully";

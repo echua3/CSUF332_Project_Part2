@@ -4,7 +4,7 @@
 <div class="menu">
     <?php include 'menu.php';?>
 </div>
-<h2>Items Expiring</h2>
+<h2>Items with Low Stock</h2>
 
 <body>
 <?php
@@ -36,7 +36,7 @@ if ($all_departments->num_rows > 0) {
 </table>
 
 <h3>Select Department:</h3>
-<form action="expiration_submit.php" method="post">
+<form action="lowstock_submit.php" method="post">
 <select name="department_name">
     <?php 
         // use a while loop to fetch data 
@@ -55,7 +55,7 @@ if ($all_departments->num_rows > 0) {
     <?php 
         endwhile; //terminate while loop
     ?>
-</select><br>
+</select>
 <input type="submit">
 </form>
 

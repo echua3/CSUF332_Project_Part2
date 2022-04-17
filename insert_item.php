@@ -20,25 +20,23 @@ $sql2 = "SELECT * FROM DEPARTMENT";
 $all_departments = $conn->query($sql2);
 
 ?>
-<table border = '2'>
+<table border = '2' style="border-collapse: collapse">
 <tr>
-<th>UPC</th>
-<th>Price</th>
-<th>Department</th>
-<th>Supplier</th>
+<th style="padding: 10px">UPC</th>
+<th style="padding: 10px">Price</th>
+<th style="padding: 10px">Department</th>
+<th style="padding: 10px">Supplier</th>
 </tr>
 
 <?php
 if ($items->num_rows > 0) {
     // output data of each row
     while($row = $items->fetch_assoc()) {
-    //   echo $row["UPC"] . " " . $row["Price"] . " " . $row["Department_Name"] . 
-    //   " " . $row["Supplier_ID"] . "<br>";
     echo "<tr>";
-    echo "<td>" . $row['UPC'] ."</td>";
-    echo "<td>" . $row['Price'] . "</td>";
-    echo "<td>" . $row['Department_Name'] . "</td>";
-    echo "<td>" . $row['Supplier_ID'] . "</td>";
+    echo "<td style='padding: 3px'>" . $row['UPC'] ."</td>";
+    echo "<td style='padding: 3px'>" . $row['Price'] . "</td>";
+    echo "<td style='padding: 3px'>" . $row['Department_Name'] . "</td>";
+    echo "<td style='padding: 3px'>" . $row['Supplier_ID'] . "</td>";
     echo "</tr>";
     }
   } else {
@@ -55,15 +53,15 @@ if ($items->num_rows > 0) {
 <label> Restock Amount: </label>
 <input type="number" min = "0" name="restock_amount"><br>
 <label> Price: </label>
-<input type="number" min = "0" name="price"><br>
+<input type="number" step="0.01" min = "0" name="price"><br>
 <label> Interim Price: </label>
-<input type="number" min = "0" name="interim_price"><br>
+<input type="number" step="0.01" min = "0" name="interim_price"><br>
 <label> Wholesale Price: </label>
-<input type="number" min = "0" name="wholesale_price"><br>
+<input type="number" step="0.01" min = "0" name="wholesale_price"><br>
 <label> Current Stock: </label>
 <input type="number" min = "0" name="current_stock"><br>
 
-<label> Departnent Name: </label>
+<label> Department Name: </label>
 <select name="department_name">
     <?php 
         // use a while loop to fetch data 

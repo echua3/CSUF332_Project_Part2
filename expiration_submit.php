@@ -32,13 +32,13 @@
     }
 ?>
 <table border = '2'>
-<caption>Lists items expiring on or before <?=$twodays_format?> </caption>
+<caption>Items expiring on or before <?=$twodays_format?> </caption>
 <tr>
 <th>UPC</th>
-<th>Current_Stock</th>
-<th>Restock_Amount</th>
-<th>Supplier_ID</th>
-<th>Expiration_Date</th>
+<th>Current Stock</th>
+<th>Restock Amount</th>
+<th>Supplier</th>
+<th>Expiration Date</th>
 </tr>
 
 <?php
@@ -61,7 +61,7 @@
         echo "</tr>";
       }
 ?>
-
+</table>
 
 </body>
 </html>
