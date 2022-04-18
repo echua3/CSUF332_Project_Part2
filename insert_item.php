@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
+<head>
+<link rel="stylesheet" href="/~cs332u7/table.css">
+<title>Add Item</title>
+</head>
 
 <div class="menu">
     <?php include 'menu.php';?>
 </div>
-<h2> Add Item to Inventory</h2>
+<h1>Add Item to Inventory</h1>
 
 <body>
 <?php
@@ -20,23 +24,27 @@ $sql2 = "SELECT * FROM DEPARTMENT";
 $all_departments = $conn->query($sql2);
 
 ?>
-<table border = '2' style="border-collapse: collapse">
+<div class="table-wrapper">
+    <table class="fl-table">
+<!-- <table border = '2' style="border-collapse: collapse"> -->
+<thead>
 <tr>
-<th style="padding: 10px">UPC</th>
-<th style="padding: 10px">Price</th>
-<th style="padding: 10px">Department</th>
-<th style="padding: 10px">Supplier</th>
+<th>UPC</th>
+<th>Price</th>
+<th>Department</th>
+<th>Supplier</th>
 </tr>
+</thead>
 
 <?php
 if ($items->num_rows > 0) {
     // output data of each row
     while($row = $items->fetch_assoc()) {
     echo "<tr>";
-    echo "<td style='padding: 3px'>" . $row['UPC'] ."</td>";
-    echo "<td style='padding: 3px'>" . $row['Price'] . "</td>";
-    echo "<td style='padding: 3px'>" . $row['Department_Name'] . "</td>";
-    echo "<td style='padding: 3px'>" . $row['Supplier_ID'] . "</td>";
+    echo "<td>" . $row['UPC'] ."</td>";
+    echo "<td>" . $row['Price'] . "</td>";
+    echo "<td>" . $row['Department_Name'] . "</td>";
+    echo "<td>" . $row['Supplier_ID'] . "</td>";
     echo "</tr>";
     }
   } else {
@@ -45,7 +53,9 @@ if ($items->num_rows > 0) {
 ?>
 </table>
 
-<h3>Enter new item information:</h3>
+<br />
+<hr />
+<h2>Enter new item information:</h2>
 
 <form action="insert_item_submit.php" method="post">
 <label> UPC: </label>
@@ -99,6 +109,7 @@ if ($items->num_rows > 0) {
 
 <input type="submit">
 </form>
+    </div>
 
 </body>
 

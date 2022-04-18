@@ -8,7 +8,7 @@
 <div class="menu">
     <?php include 'menu.php';?>
 </div>
-<h2>Add Item to Transaction</h2>
+<h1>Add Item to Transaction</h1>
 
 <body>
     <div>
@@ -94,10 +94,10 @@ if ($all_transactions->num_rows > 0) {
 </table>
 
 </div>
-
+<br />
+<hr />
 <div style="clear:both">
-<br>
-<h3>Add Item to Transaction:</h3>
+<h2>Add Item to Transaction:</h2>
 <form action="buyitem_submit.php" method="post">
 <label>Item:</label>
 <select name="UPC" required>

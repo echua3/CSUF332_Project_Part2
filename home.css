@@ -1,0 +1,50 @@
+body {
+    background-color: lavender;
+}
+
+header {
+    text-align: center;
+}
+
+input, label {
+    display: inline-block;
+}
+
+
+
+#choose {
+    margin-top: 10px;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+        table-layout: fixed;
+
+
+}
+
+#buttons {
+    text-align: center;
+
+}
+
+#input_search {
+    text-align: center;
+
+}
+
+
+ /* unvisited link /
+a:link, a:visited {
+    background-color: #228B22;
+     color: white;
+      padding: 14px 25px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+}
+
+
+/ mouse over link */
+a:hover, a:active {
+  background-color: hotpink;
+}

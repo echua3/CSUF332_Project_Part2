@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
-
+<head>
+<link rel="stylesheet" href="/~cs332u7/table.css">
+<title> Item Expiration </title>
+</head>
 
 <div class="menu">
     <?php include 'menu.php';?>
 </div>
 
-<h3> Items Expiring Soon in the <?= $_POST['department_name'] ?> Department</h3>
+<h1> Items Expiring Soon in the <?= $_POST['department_name'] ?> Department</h1>
 
 <body>
 <?php
@@ -31,8 +34,11 @@
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 ?>
-<table border = '2'>
+<div class="table-wrapper">
+    <table class="fl-table">
+<!-- <table border = '2'> -->
 <caption>Items expiring on or before <?=$twodays_format?> </caption>
+<thead>
 <tr>
 <th>UPC</th>
 <th>Current Stock</th>
@@ -40,6 +46,7 @@
 <th>Supplier</th>
 <th>Expiration Date</th>
 </tr>
+</thead>
 
 <?php
     if ($items->num_rows > 0) {
@@ -62,6 +69,7 @@
       }
 ?>
 </table>
+</div>
 
 </body>
 </html>

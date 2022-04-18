@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
+<head>
+<link rel="stylesheet" href="/~cs332u7/table.css">
+<title> Item Expiration </title>
+</head>
 
 <div class="menu">
     <?php include 'menu.php';?>
 </div>
-<h2>Items Expiring</h2>
+<h1>Items Expiring</h1>
 
 <body>
 <?php
@@ -13,20 +17,23 @@ require_once('connect.php');
 $sql = "SELECT * FROM DEPARTMENT";
 $all_departments = $conn->query($sql);
 ?>
-
-<table border = '2' style="border-collapse: collapse">
+<div class="table-wrapper">
+    <table class="fl-table">
+<!-- <table border = '2' style="border-collapse: collapse"> -->
+<thead> 
 <tr>
-<th style="padding: 10px">Department</th>
-<th style="padding: 10px">Section</th>
+<th>Department</th>
+<th>Section</th>
 </tr>
+</thead>
 
 <?php
 if ($all_departments->num_rows > 0) {
     // output data of each row
     while($row = $all_departments->fetch_assoc()) {
     echo "<tr>";
-    echo "<td style='padding: 3px'>" . $row['Name'] . "</td>";
-    echo "<td style='padding: 3px'>" . $row['Section'] . "</td>";
+    echo "<td>" . $row['Name'] . "</td>";
+    echo "<td>" . $row['Section'] . "</td>";
     echo "</tr>";
     }
   } else {
@@ -35,7 +42,9 @@ if ($all_departments->num_rows > 0) {
 ?>
 </table>
 
-<h3>Select Department:</h3>
+<br />
+<hr />
+<h2>Select Department:</h2>
 <form action="expiration_submit.php" method="post">
 <select name="department_name">
     <?php 
@@ -55,9 +64,10 @@ if ($all_departments->num_rows > 0) {
     <?php 
         endwhile; //terminate while loop
     ?>
-</select><br>
+</select>
 <input type="submit">
 </form>
+</div>
 
 </body>
 
