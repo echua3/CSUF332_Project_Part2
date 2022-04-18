@@ -56,6 +56,11 @@
     echo $customer_phone . "<br>";
     echo $transaction_ID . "<br>";
 
+    // if(strcmp($transaction_ID, "New") == 0){
+    //     include('createtransaction.php');
+    //     createtransaction($customer_phone);
+    // }
+
     // create new transaction if transaction_ID = new
     if(strcmp($transaction_ID,"New") == 0){
         $sql = "SELECT Count(*) FROM TRANSACTION
