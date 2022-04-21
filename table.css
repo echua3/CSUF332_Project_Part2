@@ -14,7 +14,8 @@ h1{
 body{
     font-family: Helvetica;
     -webkit-font-smoothing: antialiased;
-    background: rgb(215, 202, 226);
+    /* background: rgb(215, 202, 226); */
+    background: rgb(252, 247, 255);
 }
 h2{
     text-align: center;
@@ -26,19 +27,21 @@ h2{
 }
 caption {
     padding: 10px;
-    font-size: 14px;
-    caption-side: bottom;
+    font-size: 20px;
+    caption-side: top;
+    font-weight: bold;
+    color: purple;
 }
 form {
     text-align:center
 }
 input {
-    background-color: rgb(249, 195, 195);
+    background-color: #FCD5CE;
     padding: 8px 8px;
     margin: 2px 0;
 }
 select {
-    background-color: rgb(249, 195, 195);
+    background-color: #FCD5CE;
     padding: 8px 8px;
     margin: 2px 0;
 }
@@ -59,7 +62,8 @@ select {
     width: 100%;
     max-width: 100%;
     white-space: nowrap;
-    background-color: rgb(249, 195, 195);
+    /* background-color: rgb(249, 195, 195); */
+    background-color: #FCD5CE;
 }
 
 .fl-table td, .fl-table th {
@@ -70,12 +74,13 @@ select {
 .fl-table td {
     border-right: 1px solid #f5cccc;
     font-size: 14px;
-    padding: 4px;
+    padding: 3px;
 }
 
 .fl-table thead th {
     color: #ffffff;
-    background: #9770c6;
+    /* background: #9770c6; */
+    background: #767FA7;
     padding: 10px;
     font-size: 16px;
 }
@@ -83,11 +88,13 @@ select {
 
 .fl-table thead th:nth-child(odd) {
     color: #ffffff;
-    background: #694276;
+    /* background: #694276; */
+    background: rgb(153, 133, 147);
 }
 
 .fl-table tr:nth-child(even) {
-    background: #F8F8F8;
+    /* background: #F8F8F8; */
+    background: #F8EDEB;
 }
 
 /* Responsive */
