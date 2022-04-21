@@ -44,35 +44,35 @@ VALUES
 
 INSERT INTO ITEM
 VALUES 
-    ('APPLE1', 50, 1.99, 1.29, 0.99, 25, 'Fruit', 'SUP001'), 
-    ('APPLE2', 40, 2.99, 1.99, 1.50, 20, 'Fruit', 'SUP001'),
-    ('WHITE1', 25, 2.99, 0.99, 0.50, 10, 'Bread', 'SUP002'),
-    ('WHEAT1', 30, 3.99, 1.50, 1.99, 7, 'Bread', 'SUP002'),
-    ('SALMON1', 10, 5.99, 3.99, 2.50, 4, 'Fish', 'SUP003'),
-    ('CARROT1', 50, 1.99, 1.00, 0.30, 20, 'Vegetable', 'SUP001'),
-    ('VANILLA1', 5, 10.99, 5.99, 3.99, 2, 'Cake', 'SUP002');  
+    ('FUJIAPPLE', 50, 1.99, 1.29, 0.99, 25, 'Fruit', 'SUP001'), 
+    ('GALAAPPLE', 40, 2.99, 1.99, 1.50, 20, 'Fruit', 'SUP001'),
+    ('WHITEBREAD', 25, 2.99, 0.99, 0.50, 10, 'Bread', 'SUP002'),
+    ('WHEATBREAD', 30, 3.99, 1.50, 1.99, 7, 'Bread', 'SUP002'),
+    ('SALMON', 10, 5.99, 3.99, 2.50, 4, 'Fish', 'SUP003'),
+    ('CARROT', 50, 1.99, 1.00, 0.30, 20, 'Vegetable', 'SUP001'),
+    ('VANILLA', 5, 10.99, 5.99, 3.99, 2, 'Cake', 'SUP002');  
 
 INSERT INTO LOCATION
 VALUES 
-    (1, 'right', 1, 1, 0, 'APPLE1'),
-    (1, 'right', 1, 1, 1, 'APPLE2'),
-    (1, 'left', 1, 1, 2, 'CARROT1'),
-    (2, 'right', 1, 1, 0, 'WHITE1'),
-    (2, 'right', 1, 1, 1, 'WHEAT1'),
-    (2, 'right', 1, 1, 3, 'WHITE1'),
-    (2, 'left', 1, 1, 1, 'VANILLA1'),
-    (3, 'left', 3, 3, 2, 'SALMON1');
+    (1, 'right', 1, 1, 0, 'FUJIAPPLE'),
+    (1, 'right', 1, 1, 1, 'GALAAPPLE'),
+    (1, 'left', 1, 1, 2, 'CARROT'),
+    (2, 'right', 1, 1, 0, 'WHITEBREAD'),
+    (2, 'right', 1, 1, 1, 'WHEATBREAD'),
+    (2, 'right', 1, 1, 3, 'WHITEBREAD'),
+    (2, 'left', 1, 1, 1, 'VANILLA'),
+    (3, 'left', 3, 3, 2, 'SALMON');
 
 INSERT INTO EXPIRATION
 VALUES 
-    ('APPLE1', "2022-04-29"),
-    ('APPLE1', "2022-04-30"), 
-    ('APPLE2', "2022-04-25"),
-    ('WHITE1', "2022-04-15"),
-    ('WHEAT1', "2022-04-16"),
-    ('SALMON1', "2022-04-14"),
-    ('CARROT1', "2022-05-20"),
-    ('VANILLA1', "2022-04-17");  
+    ('FUJIAPPLE', "2022-04-29"),
+    ('FUJIAPPLE', "2022-04-30"), 
+    ('GALAAPPLE', "2022-04-25"),
+    ('WHITEBREAD', "2022-04-15"),
+    ('WHEATBREAD', "2022-04-16"),
+    ('SALMON', "2022-04-14"),
+    ('CARROT', "2022-05-20"),
+    ('VANILLA', "2022-04-17");  
 
 INSERT INTO DELIVERY
 VALUES 
@@ -83,10 +83,10 @@ VALUES
 
 INSERT INTO `ORDER`
 VALUES 
-    ('APPLE1', 4, "2022-04-10", 'yes', 'DELV01'),
-    ('WHITE1', 2, "2022-04-10", 'yes', 'DELV01'),
-    ('APPLE1', 10, "2022-04-11", 'no', NULL),
-    ('VANILLA1', 1, "2022-04-10", 'yes', 'DELV02');
+    ('FUJIAPPLE', 4, "2022-04-10", 'yes', 'DELV01'),
+    ('WHITEBREAD', 2, "2022-04-10", 'yes', 'DELV01'),
+    ('FUJIAPPLE', 10, "2022-04-11", 'no', NULL),
+    ('VANILLA', 1, "2022-04-10", 'yes', 'DELV02');
 
 INSERT INTO CUSTOMER
 VALUES 
@@ -110,32 +110,32 @@ VALUES
 
 INSERT INTO PURCHASE
 VALUES 
-    ('APPLE1', 'TRANS01', '0000000000', 4, 1.29),
-    ('WHITE1', 'TRANS01','1111111111', 2, 2.99),
-    ('APPLE1', 'TRANS02','1111111111', 5, 1.29),
-    ('VANILLA1', 'TRANS01','2222222222', 1, 10.99),
-    ('WHEAT1', 'TRANS01','3333333333', 2, 2.99),
-    ('CARROT1', 'TRANS02','3333333333', 5, 1.99),
-    ('SALMON1', 'TRANS01','4444444444', 2, 5.99),
-    ('APPLE2', 'TRANS01','5555555555', 4, 2.99);
+    ('FUJIAPPLE', 'TRANS01', '0000000000', 4, 1.29),
+    ('WHITEBREAD', 'TRANS01','1111111111', 2, 2.99),
+    ('FUJIAPPLE', 'TRANS02','1111111111', 5, 1.29),
+    ('VANILLA', 'TRANS01','2222222222', 1, 10.99),
+    ('WHEATBREAD', 'TRANS01','3333333333', 2, 2.99),
+    ('CARROT', 'TRANS02','3333333333', 5, 1.99),
+    ('SALMON', 'TRANS01','4444444444', 2, 5.99),
+    ('GALAAPPLE', 'TRANS01','5555555555', 4, 2.99);
 
 INSERT INTO COUPON
 VALUES 
-    ('COUP01', 0.50, 2, 'APPLE1'),
-    ('COUP02', 0.60, 5, 'APPLE1'),
-    ('COUP03', 3.99, 1, 'VANILLA1'),
-    ('COUP04', 0.99, 3, 'WHITE1');
+    ('COUP01', 0.50, 2, 'FUJIAPPLE'),
+    ('COUP02', 0.60, 5, 'FUJIAPPLE'),
+    ('COUP03', 3.99, 1, 'VANILLA'),
+    ('COUP04', 0.99, 3, 'WHITEBREAD');
 
 INSERT INTO BOUGHT
 VALUES 
-    ('APPLE1', '0000000000'),
-    ('WHITE1', '1111111111'),
-    ('APPLE1', '1111111111'),
-    ('VANILLA1', '2222222222'),
-    ('WHEAT1', '3333333333'),
-    ('CARROT1', '3333333333'),
-    ('SALMON1', '4444444444'),
-    ('APPLE2', '5555555555');
+    ('FUJIAPPLE', '0000000000'),
+    ('WHITEBREAD', '1111111111'),
+    ('FUJIAPPLE', '1111111111'),
+    ('VANILLA', '2222222222'),
+    ('WHEATBREAD', '3333333333'),
+    ('CARROT', '3333333333'),
+    ('SALMON', '4444444444'),
+    ('GALAAPPLE', '5555555555');
 
 INSERT INTO DOWNLOADS
 VALUES 
