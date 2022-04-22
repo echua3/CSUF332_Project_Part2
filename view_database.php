@@ -10,7 +10,23 @@
         <?php include 'menu.php';?>
     </div>
     <div class="table-wrapper">
-        <h1>Items</h1>
+        <a href="#items">Items</a> 
+        <a href="#suppliers">Suppliers</a> 
+        <a href="#departments">Departments</a> 
+        <a href="#employees">Employees</a> 
+        <a href="#supervises">Supervisors</a> 
+        <a href="#locations">Locations</a> 
+        <a href="#expiration">Expiration</a> 
+        <a href="#deliveries">Deliveries</a> 
+        <a href="#orders">Orders</a> 
+        <a href="#customers">Customers</a> 
+        <a href="#transaction">Transactions</a> 
+        <a href="#purchases">Purchases</a> 
+        <a href="#coupons">Coupons</a> 
+        <a href="#bought">Bought</a> 
+        <a href="#downloads">Downloads</a>   
+
+        <a id="items"><h1>Items</h1></a>
         <?php
             require_once('connect.php');
 
@@ -54,7 +70,7 @@
                 }
             ?>
         </table>
-        <h1>Suppliers</h1>
+        <a id="suppliers"><h1>Suppliers</h1></a>
         <?php
             require_once('connect.php');
 
@@ -88,7 +104,7 @@
                 }
             ?>
         </table>
-        <h1>Departments</h1>
+        <a id="departments"><h1>Departments</h1></a>
         <?php
             require_once('connect.php');
 
@@ -120,7 +136,7 @@
                 }
             ?>
         </table>
-        <h1>Employees</h1>
+        <a id="employees"><h1>Employees</h1></a>
         <?php
             require_once('connect.php');
 
@@ -159,7 +175,7 @@
                 }
             ?>
         </table>
-        <h1>Supervises</h1>
+        <a id="supervises"><h1>Supervises</h1></a>
         <?php
             require_once('connect.php');
 
@@ -192,7 +208,7 @@
                 }
             ?>
         </table>
-        <h1>Locations</h1>
+        <a id="locations"><h1>Locations</h1></a>
         <?php
             require_once('connect.php');
 
@@ -233,7 +249,7 @@
                 }
             ?>
         </table>
-        <h1>Expiration</h1>
+        <a id="expiration"><h1>Expiration</h1></a>
         <?php
             require_once('connect.php');
 
@@ -266,7 +282,7 @@
                 }
             ?>
         </table>
-        <h1>Deliveries</h1>
+        <a id="deliveries"><h1>Deliveries</h1></a>
         <?php
             require_once('connect.php');
             $sql = "SELECT * FROM DELIVERY
@@ -300,7 +316,7 @@
                 }
             ?>
         </table>
-        <h1>Orders</h1>
+        <a id="orders"><h1>Orders</h1></a>
         <?php
             require_once('connect.php');
 
@@ -339,7 +355,7 @@
                 }
             ?>
         </table>
-        <h1>Customers</h1>
+        <a id="customers"><h1>Customers</h1></a>
         <?php
             require_once('connect.php');
 
@@ -372,7 +388,7 @@
                 }
             ?>
         </table>
-        <h1>Transactions</h1>
+        <a id="transactions"><h1>Transactions</h1></a>
         <?php
             require_once('connect.php');
 
@@ -409,7 +425,7 @@
                 }
             ?>
         </table>
-        <h1>Purchases</h1>
+        <a id="purchases"><h1>Purchases</h1></a>
         <?php
             require_once('connect.php');
 
@@ -448,7 +464,7 @@
                 }
             ?>
         </table>
-        <h1>Coupons</h1>
+        <a id="coupons"> <h1>Coupons</h1> </a>
         <?php
             require_once('connect.php');
 
@@ -485,7 +501,7 @@
                 }
             ?>
         </table>
-        <h1>Bought</h1>
+        <a id="bought"> <h1>Bought</h1> </a>
         <?php
             require_once('connect.php');
 
@@ -518,7 +534,7 @@
                 }
             ?>
         </table>
-        <h1>Downloads</h1>
+        <a id="downloads"> <h1>Downloads</h1> </a>
         <?php
             require_once('connect.php');
 
