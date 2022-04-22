@@ -4,8 +4,9 @@
 -->
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="/~cs332u7/table.css">
-<title> Buy Item </title>
+<head>
+    <link rel="stylesheet" href="/~cs332u7/table.css">
+    <title> Buy Item </title>
 </head>
 
 <div class="menu">
@@ -26,25 +27,27 @@
             <!-- <table border = '2' style="display: inline-block; border-collapse: collapse"> -->
                 <thead>
                     <tr>
-                    <th>Item</th>
-                    <th>Stock</th>
-                    <th>Price</th>
-                    <th>Interim Price</th>
-                    <th>Wholesale Price</th>
+                        <th>Item</th>
+                        <th>Stock</th>
+                        <th>Price</th>
+                        <th>Interim Price</th>
+                        <th>Wholesale Price</th>
                     </tr>
                 </thead>
             <?php
                 if ($all_items->num_rows > 0) {
                     // output data of each row
-                    while($row = $all_items->fetch_assoc()) {
-                    echo "<tr>";
-                    echo "<td>" . $row['UPC'] . "</td>";
-                    echo "<td>" . $row['Current_Stock'] . "</td>";
-                    echo "<td>" . $row['Price'] . "</td>";
-                    echo "<td>" . $row['Interim_Price'] . "</td>";
-                    echo "<td>" . $row['Wholesale_Price'] . "</td>";
-                    echo "</tr>";
+                    echo "<tbody>";
+                    while($row = $all_items->fetch_assoc()) {   
+                        echo "<tr>";
+                        echo "<td>" . $row['UPC'] . "</td>";
+                        echo "<td>" . $row['Current_Stock'] . "</td>";
+                        echo "<td>" . $row['Price'] . "</td>";
+                        echo "<td>" . $row['Interim_Price'] . "</td>";
+                        echo "<td>" . $row['Wholesale_Price'] . "</td>";
+                        echo "</tr>";
                     }
+                    echo "</tbody>";
                 } else {
                     echo "0 items";
                 }
@@ -66,12 +69,14 @@
                 <?php
                     if ($all_customers->num_rows > 0) {
                         // output data of each row
+                        echo "<tbody>";
                         while($row = $all_customers->fetch_assoc()) {
                         echo "<tr>";
                         echo "<td>" . $row['Name'] . "</td>";
                         echo "<td>" . $row['Phone_Number'] . "</td>";
                         echo "</tr>";
                         }
+                        echo "</tbody>";
                     } else {
                         echo "0 items";
                     }
@@ -94,12 +99,14 @@
             <?php
                 if ($all_transactions->num_rows > 0) {
                     // output data of each row
+                    echo "<tbody>";
                     while($row = $all_transactions->fetch_assoc()) {
                     echo "<tr>";
                     echo "<td>" . $row['ID'] . "</td>";
                     echo "<td>" . $row['Customer_Phone_Number'] . "</td>";
                     echo "</tr>";
                     }
+                    echo "</tbody>";
                 } else {
                     echo "0 items";
                 }
