@@ -117,33 +117,33 @@ customer.
             $response = $conn->query($sql);
             // echo $sql;
         ?>
-            <table class="fl-table">
-                <!-- <table border = '2'> -->
-                <caption>Items in Transaction <?=$twodays_format?> </caption>
-                <thead>
-                    <tr>
-                        <th>Item</th>
-                        <th>Number Bought</th>
-                        <th>Price Paid</th>
-                    </tr>
-                </thead>
-                <?php
-                    if ($response->num_rows > 0) {
-                        // output data of each row
-                        while($row = $response->fetch_assoc()) {
-                        echo "<tr>";
-                        echo "<td>" . $row['Item_UPC'] . "</td>";
-                        echo "<td>" . $row['Number_Bought'] . "</td>";
-                        echo "<td>" . $row['Price_Paid'] . "</td>";
-                        echo "</tr>";
-                        }
-                    } else {
-                        echo "<tr>";
-                        echo "<td>" . "0 items in transaction";
-                        echo "</tr>";
+        <table class="fl-table">
+            <!-- <table border = '2'> -->
+            <caption>Items in Transaction</caption>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Number Bought</th>
+                    <th>Price Paid</th>
+                </tr>
+            </thead>
+            <?php
+                if ($response->num_rows > 0) {
+                    // output data of each row
+                    while($row = $response->fetch_assoc()) {
+                    echo "<tr>";
+                    echo "<td>" . $row['Item_UPC'] . "</td>";
+                    echo "<td>" . $row['Number_Bought'] . "</td>";
+                    echo "<td>" . $row['Price_Paid'] . "</td>";
+                    echo "</tr>";
                     }
-                ?>
-            </table>
+                } else {
+                    echo "<tr>";
+                    echo "<td>" . "0 items in transaction";
+                    echo "</tr>";
+                }
+            ?>
+        </table>
     </div>
 </body>
 </html>

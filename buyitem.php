@@ -54,7 +54,8 @@
             ?>
             </table>
         <?php
-            $sql = "SELECT * FROM CUSTOMER";
+            $sql = "SELECT * FROM CUSTOMER 
+            ORDER BY CUSTOMER.Name";
             $all_customers = $conn->query($sql);
         ?>
         <table class="fl-table">
@@ -84,7 +85,7 @@
         </table>
         <?php
             $sql = "SELECT * FROM TRANSACTION
-            ORDER BY TRANSACTION.Customer_Phone_Number";
+            ORDER BY TRANSACTION.Customer_Phone_Number, TRANSACTION.ID";
             $all_transactions = $conn->query($sql);
         ?>
         <table class="fl-table">
