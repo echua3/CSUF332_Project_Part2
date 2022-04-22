@@ -45,7 +45,7 @@ Returns 0 if the transaction does not exist  -->
                             echo "<tr>";
                             echo "<td>" . $row['Item_UPC'] . "</td>";
                             echo "<td>" . $row['Number_Bought'] . "</td>";
-                            echo "<td>" . $row['Price_Paid'] . "</td>";
+                            echo "<td>$" . $row['Price_Paid'] . "</td>";
                             echo "</tr>";
                             $total_price = $total_price + ($row['Price_Paid'] * $row['Number_Bought']);
                         }

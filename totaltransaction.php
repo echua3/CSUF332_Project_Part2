@@ -94,7 +94,7 @@ Returns 0 if the transaction does not exist  -->
                 <?php 
                     endwhile; //terminate while loop
                 ?>
-            </select><br>
+            </select>
             <input type="submit">
         </form>
     </div>
