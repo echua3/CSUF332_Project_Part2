@@ -46,5 +46,5 @@ a:link, a:visited {
 
 / mouse over link */
 a:hover, a:active {
-  background-color: hotpink;
+  background-color: yellow;
 }
