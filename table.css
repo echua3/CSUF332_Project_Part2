@@ -27,7 +27,7 @@ caption {
     font-size: 20px;
     caption-side: top;
     font-weight: bold;
-    color: purple;
+    /* color: #767FA7; */
 }
 form {
     text-align:center
@@ -173,4 +173,8 @@ select {
         display: block;
         text-align: center;
     }
+}
+
+a:hover, a:active {
+  background-color: lavender;
 }
