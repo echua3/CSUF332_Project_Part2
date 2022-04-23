@@ -73,6 +73,9 @@ Should add the number of each item received to the stock of that item -->
                 </select>
                 <input type="submit">
             </form>
+            <p style='text-align:center'> Updates the item inventory and removes the delivery and associated 
+                orders.
+            </p>
         </div>
     </body>
 
