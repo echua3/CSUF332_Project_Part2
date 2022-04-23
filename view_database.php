@@ -35,7 +35,6 @@
         ?>
     
         <table class="fl-table">
-            <!-- <table border = '2' style="display: inline-block; border-collapse: collapse"> -->
             <thead>
                 <tr>
                     <th>Item UPC</th>
@@ -79,7 +78,6 @@
         ?>
     
         <table class="fl-table">
-            <!-- <table border = '2' style="display: inline-block; border-collapse: collapse"> -->
             <thead>
                 <tr>
                     <th>Supplier ID</th>
@@ -113,7 +111,6 @@
         ?>
     
         <table class="fl-table">
-            <!-- <table border = '2' style="display: inline-block; border-collapse: collapse"> -->
             <thead>
                 <tr>
                     <th>Name</th>
@@ -146,7 +143,6 @@
         ?>
     
         <table class="fl-table">
-            <!-- <table border = '2' style="display: inline-block; border-collapse: collapse"> -->
             <thead>
                 <tr>
                     <th>Employee ID</th>
@@ -185,7 +181,6 @@
         ?>
     
         <table class="fl-table">
-            <!-- <table border = '2' style="display: inline-block; border-collapse: collapse"> -->
             <thead>
                 <tr>
                     <th>Department Name</th>
@@ -218,7 +213,6 @@
         ?>
     
         <table class="fl-table">
-            <!-- <table border = '2' style="display: inline-block; border-collapse: collapse"> -->
             <thead>
                 <tr>
                     <th>Aisle Number</th>
@@ -259,7 +253,6 @@
         ?>
     
         <table class="fl-table">
-            <!-- <table border = '2' style="display: inline-block; border-collapse: collapse"> -->
             <thead>
                 <tr>
                     <th>Item UPC</th>
@@ -326,7 +319,6 @@
         ?>
     
         <table class="fl-table">
-            <!-- <table border = '2' style="display: inline-block; border-collapse: collapse"> -->
             <thead>
                 <tr>
                     <th>Item UPC</th>
@@ -365,7 +357,6 @@
         ?>
     
         <table class="fl-table">
-            <!-- <table border = '2' style="display: inline-block; border-collapse: collapse"> -->
             <thead>
                 <tr>
                     <th>Name</th>
@@ -398,7 +389,6 @@
         ?>
     
         <table class="fl-table">
-            <!-- <table border = '2' style="display: inline-block; border-collapse: collapse"> -->
             <thead>
                 <tr>
                     <th>Customer Phone Number</th>
@@ -435,7 +425,6 @@
         ?>
     
         <table class="fl-table">
-            <!-- <table border = '2' style="display: inline-block; border-collapse: collapse"> -->
             <thead>
                 <tr>
                     <th>Transaction ID</th>
@@ -474,7 +463,6 @@
         ?>
     
         <table class="fl-table">
-            <!-- <table border = '2' style="display: inline-block; border-collapse: collapse"> -->
             <thead>
                 <tr>
                     <th>Coupon ID</th>
@@ -511,7 +499,6 @@
         ?>
     
         <table class="fl-table">
-            <!-- <table border = '2' style="display: inline-block; border-collapse: collapse"> -->
             <thead>
                 <tr>
                     <th>Item UPC</th>
@@ -544,7 +531,6 @@
         ?>
     
         <table class="fl-table">
-            <!-- <table border = '2' style="display: inline-block; border-collapse: collapse"> -->
             <thead>
                 <tr>
                     <th>Coupon ID</th>
