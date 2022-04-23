@@ -6,6 +6,6 @@
     <a href="/~cs332u7/buyitem.php">Buy Item</a> -
     <a href="/~cs332u7/totaltransaction.php">Transaction Total</a> -
     <a href="/~cs332u7/receivedelivery.php">Delivery</a> -
-    <a href="/~cs332u7/order.php">View Database</a> -
+    <a href="/~cs332u7/order.php">Order</a> -
     <a href="/~cs332u7/view_database.php">View Database</a>';
 ?>
