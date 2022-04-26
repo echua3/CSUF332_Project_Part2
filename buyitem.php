@@ -117,74 +117,84 @@
         <hr />
         <h2>Add Item to Transaction:</h2>
         <form action="buyitem_submit.php" method="post">
-            <label>Item:</label>
-            <select name="UPC" required>
-                <?php 
-                    // use a while loop to fetch data 
-                    $sql = "SELECT * FROM ITEM";
-                    $all_items = $conn->query($sql);
+            <div class="row">
+                <label>Item:</label>
+                <select name="UPC" required>
+                    <?php 
+                        // use a while loop to fetch data 
+                        $sql = "SELECT * FROM ITEM";
+                        $all_items = $conn->query($sql);
 
-                    while ($item = mysqli_fetch_array($all_items, MYSQLI_ASSOC)):; 
-                ?>
-                <option value="<?php echo $item["UPC"]?>">
-                    <?php echo $item["UPC"];
-                        // To show the category name to the user
+                        while ($item = mysqli_fetch_array($all_items, MYSQLI_ASSOC)):; 
                     ?>
-                </option>
-                <?php 
-                    endwhile; //terminate while loop
-                ?>
-            </select><br>
-            <label>Amount: </label>
-            <input type="number" min = "1" name="amount"><br>
-            <label>Price: </label>
-            <select name="price">
-                <option value ="price">Price</option>
-                <option value ="interim_price">Interim</option>
-                <option value ="wholesale_price">Wholesale</option>
-            </select><br>
-            <label> Customer Phone: </label>
-            <select name="customer_phone_number">
-                <?php 
-                    // use a while loop to fetch data 
-                    $sql = "SELECT * FROM CUSTOMER";
-                    $all_customers = $conn->query($sql);
+                    <option value="<?php echo $item["UPC"]?>">
+                        <?php echo $item["UPC"];
+                            // To show the category name to the user
+                        ?>
+                    </option>
+                    <?php 
+                        endwhile; //terminate while loop
+                    ?>
+                </select><br>
+            </div>
+            <div class="row">
+                <label>Amount: </label>
+                <input type="number" min = "1" name="amount"><br>
+                <label>Price: </label>
+                <select name="price">
+                    <option value ="price">Price</option>
+                    <option value ="interim_price">Interim</option>
+                    <option value ="wholesale_price">Wholesale</option>
+                </select><br>
+            </div>
+            <div class="row">
+                <label> Customer Phone: </label>
+                <select name="customer_phone_number">
+                    <?php 
+                        // use a while loop to fetch data 
+                        $sql = "SELECT * FROM CUSTOMER";
+                        $all_customers = $conn->query($sql);
 
-                    while ($customer = mysqli_fetch_array($all_customers, MYSQLI_ASSOC)):; 
-                ?>
-                    <option value="<?php echo $customer["Phone_Number"]; // primary key
-                    ?>"
-                    >
-                    <?php echo $customer["Phone_Number"];
-                        // To show the category name to the user
+                        while ($customer = mysqli_fetch_array($all_customers, MYSQLI_ASSOC)):; 
                     ?>
-                </option>
-                <?php 
-                    endwhile; //terminate while loop
-                ?>
-            </select><br>
-            <label>Transaction ID: </label>
-            <select name="transaction_ID">
-                <option value="New">New</option>
-                <?php 
-                    // use a while loop to fetch data 
-                    $sql = "SELECT DISTINCT ID FROM TRANSACTION";
-                    $all_transactions = $conn->query($sql);
+                        <option value="<?php echo $customer["Phone_Number"]; // primary key
+                        ?>"
+                        >
+                        <?php echo $customer["Phone_Number"];
+                            // To show the category name to the user
+                        ?>
+                    </option>
+                    <?php 
+                        endwhile; //terminate while loop
+                    ?>
+                </select><br>
+            </div>
+            <div class="row">
+                <label>Transaction ID: </label>
+                <select name="transaction_ID">
+                    <option value="New">New</option>
+                    <?php 
+                        // use a while loop to fetch data 
+                        $sql = "SELECT DISTINCT ID FROM TRANSACTION";
+                        $all_transactions = $conn->query($sql);
 
-                    while ($transaction = mysqli_fetch_array($all_transactions, MYSQLI_ASSOC)):; 
-                ?>
-                    <option value="<?php echo $transaction["ID"]; // primary key
-                    ?>"
-                    >
-                    <?php echo $transaction["ID"];
-                        // To show the category name to the user
+                        while ($transaction = mysqli_fetch_array($all_transactions, MYSQLI_ASSOC)):; 
                     ?>
-                </option>
-                <?php 
-                    endwhile; //terminate while loop
-                ?>
-            </select><br>
-            <input type="submit">
+                        <option value="<?php echo $transaction["ID"]; // primary key
+                        ?>"
+                        >
+                        <?php echo $transaction["ID"];
+                            // To show the category name to the user
+                        ?>
+                    </option>
+                    <?php 
+                        endwhile; //terminate while loop
+                    ?>
+                </select><br>
+            </div>
+            <div class="row">
+                <input type="submit">
+            </div>
         </form>
     </div>
 </body>

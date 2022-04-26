@@ -29,20 +29,52 @@ caption {
     font-weight: bold;
     /* color: #767FA7; */
 }
-form {
-    text-align:center
+/* form text{
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+} */
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+label {
+    padding: 12px 12px 12px 0;
+    width: 25%;
+    margin-top: 6px;
+    float: left;
 }
 input {
     background-color: #FCD5CE;
     padding: 8px 8px;
     margin: 2px 0;
+    border: none;
+    width: 100%;
+    float: left;
+    width: 75%;
+    margin-top: 6px;
 }
 select {
     background-color: #FCD5CE;
     padding: 8px 8px;
     margin: 2px 0;
+    width: 100%;
+    border: none;
+    float: left;
+    width: 75%;
+    text-align: center;
 }
-
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #767FA7;
+    border: none;
+    color: white;
+    padding: 8px 8px;
+    margin: 2px 0;
+    cursor: pointer;
+    width: 100%;
+}
 /* Table Styles */
 
 .table-wrapper{

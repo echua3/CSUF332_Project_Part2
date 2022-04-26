@@ -56,45 +56,49 @@ Returns 0 if the transaction does not exist  -->
         <hr />
         <h2>Select Transaction:</h2>
         <form action="totaltransaction_submit.php" method="post">
-            <label>Transaction ID: </label>
-            <select name="transaction_ID">
-                <?php 
-                    // use a while loop to fetch data 
-                    $sql = "SELECT DISTINCT ID FROM TRANSACTION";
-                    $all_transactions = $conn->query($sql);
-                    while ($transaction = mysqli_fetch_array($all_transactions, MYSQLI_ASSOC)):; 
-                ?>
-                    <option value="<?php echo $transaction["ID"]; // primary key
-                    ?>"
-                    >
-                    <?php echo $transaction["ID"];
-                        // To show the category name to the user
+            <div class="row">
+                <label>Transaction ID: </label>
+                <select name="transaction_ID">
+                    <?php 
+                        // use a while loop to fetch data 
+                        $sql = "SELECT DISTINCT ID FROM TRANSACTION";
+                        $all_transactions = $conn->query($sql);
+                        while ($transaction = mysqli_fetch_array($all_transactions, MYSQLI_ASSOC)):; 
                     ?>
-                </option>
-                <?php 
-                    endwhile; //terminate while loop
-                ?>
-            </select><br>
-            <label> Customer Phone Number: </label>
-            <select name="customer_phone_number">
-                <?php 
-                    // use a while loop to fetch data 
-                    $sql = "SELECT * FROM CUSTOMER";
-                    $all_customers = $conn->query($sql);
+                        <option value="<?php echo $transaction["ID"]; // primary key
+                        ?>"
+                        >
+                        <?php echo $transaction["ID"];
+                            // To show the category name to the user
+                        ?>
+                    </option>
+                    <?php 
+                        endwhile; //terminate while loop
+                    ?>
+                </select><br>
+            </div>
+            <div class="row">
+                <label> Customer Phone Number: </label>
+                <select name="customer_phone_number">
+                    <?php 
+                        // use a while loop to fetch data 
+                        $sql = "SELECT * FROM CUSTOMER";
+                        $all_customers = $conn->query($sql);
 
-                    while ($customer = mysqli_fetch_array($all_customers, MYSQLI_ASSOC)):; 
-                ?>
-                    <option value="<?php echo $customer["Phone_Number"]; // primary key
-                    ?>"
-                    >
-                    <?php echo $customer["Phone_Number"];
-                        // To show the category name to the user
+                        while ($customer = mysqli_fetch_array($all_customers, MYSQLI_ASSOC)):; 
                     ?>
-                </option>
-                <?php 
-                    endwhile; //terminate while loop
-                ?>
-            </select>
+                        <option value="<?php echo $customer["Phone_Number"]; // primary key
+                        ?>"
+                        >
+                        <?php echo $customer["Phone_Number"];
+                            // To show the category name to the user
+                        ?>
+                    </option>
+                    <?php 
+                        endwhile; //terminate while loop
+                    ?>
+                </select>
+            </div>
             <input type="submit">
         </form>
     </div>
