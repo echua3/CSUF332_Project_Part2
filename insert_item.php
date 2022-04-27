@@ -118,7 +118,7 @@
             </div>
             <div class="row">
                 <input type="submit">
-            </div \>
+            </div >
         </form>
     </div>
 </body>
