@@ -18,7 +18,7 @@
         <a href="#deliveries">Deliveries</a> 
         <a href="#orders">Orders</a> 
         <a href="#customers">Customers</a> 
-        <a href="#transaction">Transactions</a> 
+        <a href="#transactions">Transactions</a> 
         <a href="#purchases">Purchases</a> 
         <a href="#coupons">Coupons</a> 
         <a href="#bought">Bought</a> 
