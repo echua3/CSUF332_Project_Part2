@@ -136,7 +136,7 @@ individual coupons were met. -->
             <form action="coupon_submit.php" method="post">
                 <div class="row">
                     <label>Customer Phone Number: </label>
-                    <select name="Customer_Phone_Number">
+                    <select name="customer_phone_number">
                         <?php 
                             // use a while loop to fetch data 
                             $sql = "SELECT * FROM CUSTOMER";
