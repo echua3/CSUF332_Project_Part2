@@ -33,18 +33,19 @@ input, label {
 }
 
 
- /* unvisited link /
+/*unvisited link */
 a:link, a:visited {
-    background-color: #228B22;
-     color: white;
-      padding: 14px 25px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
+    background-color: #767FA7;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    display: inline-block;
+    margin-top: 10px;
 }
 
 
-/ mouse over link */
+/* mouse over link */
 a:hover, a:active {
-  background-color: yellow;
+  background-color: pink;
+  color: black;
 }
