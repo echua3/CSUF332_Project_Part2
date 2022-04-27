@@ -99,7 +99,9 @@ Returns 0 if the transaction does not exist  -->
                     ?>
                 </select>
             </div>
-            <input type="submit">
+            <div class="row">
+                <input type="submit">
+            </div>
         </form>
     </div>
 </body>

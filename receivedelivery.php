@@ -52,26 +52,30 @@ Should add the number of each item received to the stock of that item -->
             <hr />
             <h2>Select Delivery:</h2>
             <form action="receivedelivery_submit.php" method="post">
-                <label>Delivery ID: </label>
-                <select name="Delivery_ID">
-                    <?php 
-                        // use a while loop to fetch data 
-                        $sql = "SELECT ID FROM DELIVERY";
-                        $all_deliveries = $conn->query($sql);
-                        while ($delivery = mysqli_fetch_array($all_deliveries, MYSQLI_ASSOC)):; 
-                    ?>
-                        <option value="<?php echo $delivery["ID"]; // primary key
-                        ?>"
-                        >
-                        <?php echo $delivery["ID"];
-                            // To show the category name to the user
+                <div class="row">
+                    <!-- <label>Delivery ID: </label> -->
+                    <select name="Delivery_ID">
+                        <?php 
+                            // use a while loop to fetch data 
+                            $sql = "SELECT ID FROM DELIVERY";
+                            $all_deliveries = $conn->query($sql);
+                            while ($delivery = mysqli_fetch_array($all_deliveries, MYSQLI_ASSOC)):; 
                         ?>
-                    </option>
-                    <?php 
-                        endwhile; //terminate while loop
-                    ?>
-                </select>
-                <input type="submit">
+                            <option value="<?php echo $delivery["ID"]; // primary key
+                            ?>"
+                            >
+                            <?php echo $delivery["ID"];
+                                // To show the category name to the user
+                            ?>
+                        </option>
+                        <?php 
+                            endwhile; //terminate while loop
+                        ?>
+                    </select>
+                <!-- </div>
+                <div class="row"> -->
+                    <input type="submit">
+                </div>
             </form>
             <p style='text-align:center'> Updates the item inventory and removes the delivery and associated 
                 orders.

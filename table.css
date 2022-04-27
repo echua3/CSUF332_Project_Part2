@@ -29,12 +29,6 @@ caption {
     font-weight: bold;
     /* color: #767FA7; */
 }
-/* form text{
-    float: left;
-    width: 25%;
-    margin-top: 6px;
-} */
-/* Clear floats after the columns */
 .row:after {
     content: "";
     display: table;
@@ -42,7 +36,7 @@ caption {
 }
 label {
     padding: 12px 12px 12px 0;
-    width: 25%;
+    width: 20%;
     margin-top: 6px;
     float: left;
 }
@@ -53,17 +47,16 @@ input {
     border: none;
     width: 100%;
     float: left;
-    width: 75%;
+    width: 70%;
     margin-top: 6px;
 }
 select {
     background-color: #FCD5CE;
     padding: 8px 8px;
     margin: 2px 0;
-    width: 100%;
     border: none;
     float: left;
-    width: 75%;
+    width: 70%;
     text-align: center;
 }
 input[type=button], input[type=submit], input[type=reset] {
@@ -73,7 +66,8 @@ input[type=button], input[type=submit], input[type=reset] {
     padding: 8px 8px;
     margin: 2px 0;
     cursor: pointer;
-    width: 100%;
+    width: 25%;
+    float: right;
 }
 /* Table Styles */
 
@@ -207,6 +201,6 @@ input[type=button], input[type=submit], input[type=reset] {
     }
 }
 
-a:hover, a:active {
+/* a:hover, a:active {
   background-color: lavender;
-}
+} */

@@ -116,7 +116,9 @@
                     ?>
                 </select><br>
             </div>
-            <input type="submit">
+            <div class="row">
+                <input type="submit">
+            </div \>
         </form>
     </div>
 </body>

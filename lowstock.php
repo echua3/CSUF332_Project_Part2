@@ -44,26 +44,28 @@
         <hr />
         <h2>Select Department:</h2>
         <form action="lowstock_submit.php" method="post">
-            <select name="department_name">
-                <?php 
-                    // use a while loop to fetch data 
-                    $sql = "SELECT * FROM DEPARTMENT";
-                    $all_departments = $conn->query($sql);
+            <div class="row">
+                <select name="department_name">
+                    <?php 
+                        // use a while loop to fetch data 
+                        $sql = "SELECT * FROM DEPARTMENT";
+                        $all_departments = $conn->query($sql);
 
-                    while ($department = mysqli_fetch_array($all_departments, MYSQLI_ASSOC)):; 
-                ?>
-                    <option value="<?php echo $department["Name"]; // primary key
-                    ?>"
-                    >
-                    <?php echo $department["Name"];
-                        // To show the category name to the user
+                        while ($department = mysqli_fetch_array($all_departments, MYSQLI_ASSOC)):; 
                     ?>
-                </option>
-                <?php 
-                    endwhile; //terminate while loop
-                ?>
-            </select>
-            <input type="submit">
+                        <option value="<?php echo $department["Name"]; // primary key
+                        ?>"
+                        >
+                        <?php echo $department["Name"];
+                            // To show the category name to the user
+                        ?>
+                    </option>
+                    <?php 
+                        endwhile; //terminate while loop
+                    ?>
+                </select>
+                <input type="submit">
+            </div>
         </form>
     </div>
 </body>

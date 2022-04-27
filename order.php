@@ -16,7 +16,6 @@ ASKS FOR INFO -->
         <?php include 'menu.php';?>
     </div>
     <h1>Order Form</h1>
-
     <div class="table-wrapper">
         <?php
             require_once('connect.php');
@@ -146,7 +145,9 @@ ASKS FOR INFO -->
                     <label>Amount: </label>
                     <input type="number" min = "1" name="amount" required>
                 </div>
-                <input type="submit">
+                <div class="row">
+                    <input type="submit">
+                </div>
             </form>
     </div>
 </html>

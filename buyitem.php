@@ -140,6 +140,8 @@
             <div class="row">
                 <label>Amount: </label>
                 <input type="number" min = "1" name="amount"><br>
+            </div>
+            <div class="row">
                 <label>Price: </label>
                 <select name="price">
                     <option value ="price">Price</option>
