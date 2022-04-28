@@ -117,64 +117,6 @@ print customer's downloaded coupons
                 bought is greater than or equal to required number bought -->
             <?php
                 require_once('connect.php');
-                // $sql = 
-                // "UPDATE PURCHASE
-                // SET PURCHASE.Price_Paid = PURCHASE.Price_Paid - COUPON.Discount_Amount
-                // FROM 
-                // ( SELECT * 
-                //     FROM (( DOWNLOADS
-                //             INNER JOIN PURCHASE ON PURCHASE.Customer_Phone_Number = DOWNLOADS.Customer_Phone_Number) 
-                //             INNER JOIN COUPON ON DOWNLOADS.COUPON_ID = COUPON.ID)
-                //         WHERE PURCHASE.Customer_Phone_Number = '$customer_phone' AND
-                //         PURCHASE.transaction_ID = '$transaction_ID'
-                // )
-                // WHERE COUPON.Required_Item_Amount <= PURCHASE.Number_Bought";
-                // echo $sql . "<br>";
-                // $sql = "UPDATE PURCHASE
-                // SET Price_Paid = PURCHASE.Price_Paid - COUPON.Discount_Amount
-                // FROM 
-                //     SELECT * 
-                //     FROM    PURCHASE
-                //             INNER JOIN DOWNLOADS ON PURCHASE.Customer_Phone_Number = DOWNLOADS.Customer_Phone_Number 
-                //             INNER JOIN COUPON ON DOWNLOADS.COUPON_ID = COUPON.ID
-                //     WHERE PURCHASE.Customer_Phone_Number = '$customer_phone' AND
-                //     PURCHASE.transaction_ID = '$transaction_ID'
-                // WHERE PURCHASE.Number_Bought >= COUPON.Required_Item_Amount";
-
-                // $sql = "UPDATE PURCHASE 
-                // SET Price_Paid = PURCHASE.Price_Paid - R.Discount_Amount 
-                //     FROM    
-                //         (   SELECT C.Required_Item_Amount, C.Discount_Amount, D.Customer_Phone_Number, C.Item_UPC
-                //             FROM DOWNLOADS AS D
-                //                 INNER JOIN COUPON AS C ON  
-                //                 D.Coupon_ID = C.ID
-                //             WHERE D.Customer_Phone_Number = '$customer_phone') AS R
-                // WHERE PURCHASE.Number_Bought >= R.Required_Item_Amount 
-                // AND PURCHASE.Customer_Phone_Number = R.Customer_Phone_Number
-                // AND PURCHASE.Customer_Phone_Number = R.Item_UPC
-                // AND PURCHASE.Transaction_ID = '$transaction_ID'";
-
-
-                // $sql = "UPDATE PURCHASE 
-                // SET Price_Paid = PURCHASE.Price_Paid - R2.Discount_Amount 
-                // WHERE   Item_UPC IN 
-                //         (   SELECT * 
-                //             FROM COUPON AS C 
-                //                 INNER JOIN (SELECT * FROM DOWNLOADS AS D 
-                //                 WHERE D.Customer_Phone_Number = '$customer_phone') AS R
-                //             ON C.ID = R.Coupon_ID) AS R2 
-                // AND Number_Bought >= R2.Required_Item_Amount
-                // AND Transaction_ID = '$transaction_ID'";
-
-                // $sql = 
-                //     "UPDATE PURCHASE
-                //     INNER JOIN (SELECT * FROM COUPON INNER JOIN DOWNLOADS ON COUPON.ID = DOWNLOADS.Coupon_ID) AS R
-                //             ON PURCHASE.Item_UPC = R.Item_UPC
-                //     SET Price_Paid = Price_Paid - Discount_Amount 
-                //     WHERE
-                //         Customer_Phone_Number = '$customer_phone'
-                //         AND Number_Bought >= Required_Item_Amount
-                //         AND Transaction_ID = '$transaction_ID'";
                 $sql = 
                 "UPDATE PURCHASE P
                 INNER JOIN COUPON C ON P.Item_UPC = C.Item_UPC
@@ -184,65 +126,17 @@ print customer's downloaded coupons
                     P.Customer_Phone_Number = '$customer_phone'
                     AND P.Number_Bought >= C.Required_Item_Amount
                     AND P.Transaction_ID = '$transaction_ID'";
-
-                    // $sql = "SELECT * FROM COUPON AS C 
-                    //     INNER JOIN (SELECT * FROM DOWNLOADS AS D 
-                    //     WHERE D.Customer_Phone_Number = '$customer_phone') AS R
-                    //     ON C.ID = R.Coupon_ID";
                 
-
-
-
-                echo $sql . "<br>";
                 $response = $conn->query($sql);
-
-                if ($response->num_rows > 0) {
-                    // output data of each row
-                    while($row = $response->fetch_assoc()) {
-                        // echo "Coupon Applied <br>";
-                        echo print_r($row) . "<br>";
-                    }
+                
+                if (mysqli_query($conn, $sql)) {
+                    //echo "Query Successful" . "<br>";
                 } else {
-                    echo "0 Coupons <br>";
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn) 
+                    . "<br>";
                 }
-
-
-                // $sql = "SELECT * FROM PURCHASE AS P, COUPON AS C, DOWNLOADS AS D
-                // WHERE P.Transaction_ID = '$transaction_ID' AND 
-                // P.Customer_Phone_Number = '$customer_phone' AND
-                // D.Customer_Phone_Number = P.Customer_Phone_Number AND 
-                // D.Coupon_ID = C.ID
-                // ORDER BY C.Required_Item_Amount DESC";
-                // $response = $conn->query($sql);
-                // echo $sql . "<br>";
-                // if ($response->num_rows > 0) {
-                //     // output data of each row
-                //     while($row = $response->fetch_assoc()) {
-                //         $discount_amount = $row['Discount_Amount'];
-                //         $item_UPC = $row['Item_UPC'];
-                //         $old_price = $row['Price_Paid'];
-                //         // check number of items bought 
-                //         if ($row['Required_Item_Amount'] <= $row['Number_Bought']){
-                //             $sql_update = "UPDATE PURCHASE 
-                //                 SET Price_Paid = $old_price - $discount_amount
-                //                 WHERE Item_UPC = $item_UPC AND 
-                //                 Transaction_ID = $transaction_ID AND
-                //                 Customer_Phone_Number = $customer_phone;"
-                //                 if (mysqli_query($conn, $sql_update)) {
-                //                     //echo "Query Successful" . "<br>";
-                //                 } else {
-                //                     echo "Error: " . $sql_update . "<br>" . mysqli_error($conn) 
-                //                     . "<br>";
-                //                 }  
-                //         } else {
-                //             echo "Requirement  NOT met <br>";
-                //         }     
-                //     }
-                // } else {
-                //     echo "0 Applicable Coupons" . "<br />";
-                // }
             ?>
-
+            <br />
             <!-- prints updated transaction table -->
             <?php
                 require_once('connect.php');
