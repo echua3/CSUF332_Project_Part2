@@ -51,6 +51,9 @@ input {
     width: 70%;
     margin-top: 6px;
 }
+input[type=date] {
+    text-align: center;
+}
 select {
     background-color: #FCD5CE;
     padding: 8px 8px;
@@ -93,7 +96,7 @@ input[type=button], input[type=submit], input[type=reset] {
 
 .fl-table tbody {
     /* Set the height of table body */
-    max-height: 250px; 
+    max-height: 200px; 
     /* Set vertical scroll */
     overflow-y: auto;
 }
@@ -201,7 +204,3 @@ input[type=button], input[type=submit], input[type=reset] {
         text-align: center;
     }
 }
-
-/* a:hover, a:active {
-  background-color: lavender;
-} */

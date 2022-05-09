@@ -69,3 +69,14 @@
     //     }
     // }
 ?>
+
+Insert Item printout statement using _POST
+                    echo "<b>UPC:</b> " . $_POST['UPC'] . "<br>";
+                    echo "<b>Restock Amount:</b> " . $_POST['restock_amount'] . "<br>";
+                    echo "<b>Price:</b> " . $_POST['price'] . "<br>";
+                    echo "<b>Interim Price:</b> " . $_POST['interim_price'] . "<br>"; 
+                    echo "<b>Wholesale Price:</b> " . $_POST['wholesale_price'] . "<br>";
+                    echo "<b>Current Stock:</b> " . $_POST['current_stock'] . "<br>";
+                    echo "<b>Department Name:</b> " . $_POST['department_name'] . "<br>"; 
+                    echo "<b>Supplier ID:</b> " . $_POST['supplier_id'] . "<br>";
+                    echo "<br>";
