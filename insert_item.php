@@ -117,8 +117,35 @@
                 </select><br>
             </div>
             <div class="row">
+                <label> Expiration Date:</label>
+                <input type="date" name="expiration_date" min=<?=date("Y-m-d", mktime(0, 0, 0, date("m")  , date("d"), date("Y")))?> multiple><br>
+            </div>
+            <div class="row">
+                <label> Aisle Number:</label>
+                <input type="number" name="aisle_number" min="0" required><br>
+            </div>
+            <div class="row">
+                <label> Aisle Side:</label>
+                <select name="aisle_side" id="side"><br>
+                    <option value="right">Right</option>
+                    <option value="left">Left</option>
+                </select>
+            </div>
+            <div class="row">
+                <label> Section Number:</label>
+                <input type="number" name="section_number" min="0" required><br>
+            </div>
+            <div class="row">
+                <label> Shelf Number:</label>
+                <input type="number" name="shelf_number" min="0" required><br>
+            </div>
+            <div class="row">
+                <label> Number of Items Down:</label>
+                <input type="number" name="number_of_items_down" min="0" required><br>
+            </div>
+            <div class="row">
                 <input type="submit">
-            </div >
+            </div>
         </form>
     </div>
 </body>
