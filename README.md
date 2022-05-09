@@ -11,3 +11,7 @@
 ### Contributions: Project done solo by Epiphany Chua
 
 ### Problems: No known problems/errors. 
+
+### Improvements:
+
+This project only utilizes HTML and CSS. The use of Javascript would allow for multiple inputs to be added at once, such as entering multiple expiration dates when adding a new item. 
