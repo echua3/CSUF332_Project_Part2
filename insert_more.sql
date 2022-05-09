@@ -2,13 +2,15 @@
     Epiphany Chua
     echua@csu.fullerton.edu
 */
-/* After that implement your schema in SQL. You should also include SQL statements to insert data into the tables. The data should have no table be empty and should include at least:
-5 items
-5 customers
-2 expiration dates for a single item
-3 employees
-3 departments
-2 orders
+/* After that implement your schema in SQL. You should also include SQL 
+statements to insert data into the tables. The data should have no table be 
+empty and should include at least:
+    5 items
+    5 customers
+    2 expiration dates for a single item
+    3 employees
+    3 departments
+    2 orders
 */
 INSERT INTO SUPPLIER
 VALUES 
@@ -141,6 +143,7 @@ VALUES
     ('TRANS01','0000000000', "2022-04-10", '09:10:11'),
     ('TRANS01','1111111111', "2022-04-10", '10:10:10'),
     ('TRANS02','1111111111', "2022-04-11", '11:11:11'),
+    ('TRANS03','1111111111', "2022-04-20", '11:11:30'),
     ('TRANS01','2222222222', "2022-04-10", '12:12:12'),
     ('TRANS01','3333333333', "2022-04-07", '13:13:33'),
     ('TRANS02','3333333333', "2022-04-08", '13:12:11'),
@@ -156,6 +159,7 @@ VALUES
     ('FUJIAPPLE', 'TRANS01', '0000000000', 4, 1.29),
     ('WHITEBREAD', 'TRANS01','1111111111', 2, 2.99),
     ('FUJIAPPLE', 'TRANS02','1111111111', 5, 1.29),
+    ('BROCCOLI', 'TRANS03','1111111111', 10, 1.29),
     ('VANILLA', 'TRANS01','2222222222', 1, 10.99),
     ('WHEATBREAD', 'TRANS01','3333333333', 2, 2.99),
     ('CARROT', 'TRANS02','3333333333', 5, 1.99),
@@ -181,6 +185,7 @@ VALUES
     ('FUJIAPPLE', '0000000000'),
     ('WHITEBREAD', '1111111111'),
     ('FUJIAPPLE', '1111111111'),
+    ('BROCCOLI', '1111111111'),
     ('VANILLA', '2222222222'),
     ('WHEATBREAD', '3333333333'),
     ('CARROT', '3333333333'),
@@ -195,6 +200,9 @@ INSERT INTO DOWNLOADS
 VALUES 
     ('COUP01', '0000000000'),
     ('COUP02', '0000000000'),
+    ('COUP02', '1111111111'),
+    ('COUP03', '1111111111'),
+    ('COUP04', '1111111111'),
     ('COUP03', '2222222222'),
     ('COUP02', '5555555555'),
     ('COUP04', '8888888888'),
