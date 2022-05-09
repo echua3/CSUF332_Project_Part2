@@ -8,10 +8,12 @@
 
 [Github Repo link](https://github.com/echua3/CSUF332_Project_Part2 "CPSC 332 Project 3 git Repo")
 
-### Contributions: Project done solo by Epiphany Chua
+### Contributions: 
+Project done solo by Epiphany Chua
 
-### Problems: No known problems/errors. 
+### Problems: 
+No known problems/errors. 
 
 ### Improvements:
 
-This project only utilizes HTML and CSS. The use of Javascript would allow for multiple inputs to be added at once, such as entering multiple expiration dates when adding a new item. 
+This project utilizes only HTML and CSS. The use of Javascript would allow for multiple inputs to be added at once, such as entering multiple expiration dates when adding a new item. 
